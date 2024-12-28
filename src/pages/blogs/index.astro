@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEOHead from '../../components/SEOHead.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { client } from '../../lib/sanity';
+import { getAllPosts } from '../../lib/queries';
+
+const posts = await client.fetch(getAllPosts);
+---
+
+<Layout title="Blog">
+  <SEOHead
+    title="Industry Insights & Updates | AquaPure Waters"
+    description="Stay updated with the latest news and insights about water distribution, quality standards, and industry best practices from AquaPure Waters."
+  />
+
+  <div class="container mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-center mb-12">Industry Insights & Updates</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {posts.map((post) => (
+        <BlogCard {...post} />
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <h2 class="text-2xl font-bold mb-6">Stay Updated</h2>
+      <p class="mb-8">Subscribe to our newsletter for the latest industry news and updates.</p>
+      <form class="max-w-md mx-auto">
+        <div class="flex gap-4">
+          <input 
+            type="email" 
+            placeholder="Enter your email"
+            class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            aria-label="Email address for newsletter"
+          >
+          <button 
+            type="submit"
+            class="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600"
+          >
+            Subscribe
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</Layout>

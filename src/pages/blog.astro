@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const blogPosts = [
+	{
+		title: "The Importance of Water Quality in Distribution",
+		date: "2024-03-15",
+		excerpt: "Learn about the critical factors that affect water quality during storage and distribution...",
+		image: "https://images.unsplash.com/photo-1536939459926-301728717817?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+	},
+	{
+		title: "Sustainable Packaging Solutions in Water Distribution",
+		date: "2024-03-10",
+		excerpt: "Discover how we're implementing eco-friendly packaging solutions for a sustainable future...",
+		image: "https://images.unsplash.com/photo-1553564552-02656d6a2390?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+	},
+	{
+		title: "Growing Your Water Distribution Business",
+		date: "2024-03-05",
+		excerpt: "Tips and strategies for expanding your water distribution business in today's market...",
+		image: "https://images.unsplash.com/photo-1560023907-5f339617ea30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+	},
+	{
+		title: "Water Safety Standards: What Distributors Need to Know",
+		date: "2024-02-28",
+		excerpt: "A comprehensive guide to water safety standards and compliance requirements...",
+		image: "https://images.unsplash.com/photo-1564419320461-6870880221ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+	}
+];
+---
+
+<Layout title="Blog">
+	<div class="container mx-auto px-4 py-12">
+		<h1 class="text-4xl font-bold text-center mb-12">Industry Insights & Updates</h1>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			{blogPosts.map(post => (
+				<article class="bg-white rounded-lg shadow-lg overflow-hidden">
+					<img src={post.image} alt={post.title} class="w-full h-48 object-cover">
+					<div class="p-6">
+						<div class="text-gray-500 text-sm mb-2">{post.date}</div>
+						<h2 class="text-xl font-bold mb-3">{post.title}</h2>
+						<p class="text-gray-600 mb-4">{post.excerpt}</p>
+						<a href="#" class="text-blue-500 font-semibold hover:text-blue-600">Read More →</a>
+					</div>
+				</article>
+			))}
+		</div>
+
+		<div class="mt-12 text-center">
+			<h2 class="text-2xl font-bold mb-6">Stay Updated</h2>
+			<p class="mb-8">Subscribe to our newsletter for the latest industry news and updates.</p>
+			<form class="max-w-md mx-auto">
+				<div class="flex gap-4">
+					<input 
+						type="email" 
+						placeholder="Enter your email"
+						class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+					>
+					<button 
+						type="submit"
+						class="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600"
+					>
+						Subscribe
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</Layout>

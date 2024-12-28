@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEOHead from '../../components/SEOHead.astro';
+import { client } from '../../lib/sanity';
+import { getPost } from '../../lib/queries';
+import { urlFor } from '../../lib/sanity';
+
+export async function getStaticPaths() {
+  const posts = await client.fetch(`*[_type == "post"]{ slug }`);
+  return posts.map(({ slug }) => ({
+    params: { slug: slug.current }
+  }));
+}
+
+const { slug } = Astro.params;
+const post = await client.fetch(getPost, { slug });
+
+const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<Layout title={post.title}>
+  <SEOHead
+    title={`${post.title} | AquaPure Waters Blog`}
+    description={post.excerpt}
+    image={urlFor(post.mainImage).width(1200).height(630).url()}
+  />
+
+  <article class="container mx-auto px-4 py-12 max-w-4xl">
+    <img
+      src={urlFor(post.mainImage).width(1200).height(600).url()}
+      alt={`Cover image for ${post.title}`}
+      class="w-full h-[400px] object-cover rounded-lg mb-8"
+    />
+
+    <h1 class="text-4xl font-bold mb-4">{post.title}</h1>
+    <div class="text-gray-600 mb-8">
+      <time datetime={post.publishedAt}>{formattedDate}</time>
+      {post.author && <span> • By {post.author}</span>}
+    </div>
+
+    <div class="prose prose-lg max-w-none">
+      {post.body}
+    </div>
+  </article>
+</Layout>

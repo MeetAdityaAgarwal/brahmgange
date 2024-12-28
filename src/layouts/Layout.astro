@@ -1,0 +1,192 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Premium packaged drinking water for distributors" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Brahmgange Beverages</title>
+  </head>
+  <body>
+  <header class="bg-blue-600 text-white">
+    <nav class="container mx-auto px-4 py-6">
+  <div class="flex justify-between items-center">
+    <a href="/" class="flex items-center space-x-3">
+      <img 
+        src="logo_init_nobg.png" 
+        alt="Brahmgange Logo" 
+        class="h-24 md:h-32 w-auto"
+      >
+      <span class="text-3xl md:text-4xl font-bold">Brahmgange Beverages</span>
+    </a>
+    
+    <!-- Mobile Hamburger Menu Button -->
+    <button 
+      class="md:hidden text-white text-3xl focus:outline-none"
+      id="hamburger-button"
+    >
+      ☰
+    </button>
+
+    <!-- Navbar Links -->
+    <ul 
+      class="hidden md:flex space-x-6" 
+      id="nav-links"
+    >
+      <li><a href="/" class="hover:text-blue-200">Home</a></li>
+      <li><a href="/about" class="hover:text-blue-200">About</a></li>
+      <li><a href="/products" class="hover:text-blue-200">Products</a></li>
+      <li><a href="/blog" class="hover:text-blue-200">Blog</a></li>
+      <li><a href="/contact" class="hover:text-blue-200">Contact</a></li>
+    </ul>
+    
+    <!-- Mobile Menu (Initially Hidden) -->
+    <ul 
+      class="md:hidden absolute top-36 left-0 w-full bg-blue-600 text-white text-center space-y-4 py-4"
+      id="mobile-nav"
+      style="display: none;"
+    >
+      <li><a href="/" class="hover:text-blue-200">Home</a></li>
+      <li><a href="/about" class="hover:text-blue-200">About</a></li>
+      <li><a href="/products" class="hover:text-blue-200">Products</a></li>
+      <li><a href="/blog" class="hover:text-blue-200">Blog</a></li>
+      <li><a href="/contact" class="hover:text-blue-200">Contact</a></li>
+    </ul>
+  </div>
+</nav>  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Footer Section 1 -->
+        <div>
+          <h3 class="text-xl font-bold mb-4"> Brahmgange Beverages Private Limited</h3>
+          <p>Providing premium quality packaged drinking water to distributors nationwide.</p>
+        </div>
+        <!-- Footer Section 2 -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="/about" class="hover:text-blue-300">About Us</a></li>
+            <li><a href="/products" class="hover:text-blue-300">Our Products</a></li>
+            <li><a href="/contact" class="hover:text-blue-300">Become a Distributor</a></li>
+          </ul>
+        </div>
+        <!-- Footer Section 3 -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contact</h3>
+          <ul class="space-y-2">
+            <li>Phone: 79009 89663</li>
+            <li>Email: info@brahmgange.com</li>
+            <li>Address: Khasra no 269 JA Kuanwala, Dehradun, Uttarakhand 248008</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div class="mt-8">
+        <h3 class="text-xl font-bold mb-4">Find Us</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3446.7963037622644!2d78.09961247629806!3d30.242884774824276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092f852ec2bca1%3A0xd6c6e8583701f947!2sBrahmgange%20Beverages%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1735381546160!5m2!1sen!2sin" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Brahmgange Beverages Location on Google Maps"></iframe>
+      </div>
+
+      <div class="text-center mt-8 pt-8 border-t border-gray-700">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Brahmgange Beverages Private Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <WhatsAppButton phoneNumber="7900989663" />
+</body>
+
+  <!-- <body> -->
+  <!--   <header class="bg-blue-600 text-white"> -->
+  <!--     <nav class="container mx-auto px-4 py-6"> -->
+  <!--       <div class="flex justify-between items-center"> -->
+  <!--         <a href="/" class="text-2xl font-bold">Brahmgange</a> -->
+  <!--         <ul class="flex space-x-6"> -->
+  <!--           <li><a href="/" class="hover:text-blue-200">Home</a></li> -->
+  <!--           <li><a href="/about" class="hover:text-blue-200">About</a></li> -->
+  <!--           <li><a href="/products" class="hover:text-blue-200">Products</a></li> -->
+  <!--           <li><a href="/blog" class="hover:text-blue-200">Blog</a></li> -->
+  <!--           <li><a href="/contact" class="hover:text-blue-200">Contact</a></li> -->
+  <!--         </ul> -->
+  <!--       </div> -->
+  <!--     </nav> -->
+  <!--   </header> -->
+  <!--   <main> -->
+  <!--     <slot /> -->
+  <!--   </main> -->
+  <!--   <footer class="bg-gray-800 text-white py-8 mt-12"> -->
+  <!--     <div class="container mx-auto px-4"> -->
+  <!--       <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> -->
+  <!--         <div> -->
+  <!--           <h3 class="text-xl font-bold mb-4">Brahmgange Waters</h3> -->
+  <!--           <p>Providing premium quality packaged drinking water to distributors nationwide.</p> -->
+  <!--         </div> -->
+  <!--         <div> -->
+  <!--           <h3 class="text-xl font-bold mb-4">Quick Links</h3> -->
+  <!--           <ul class="space-y-2"> -->
+  <!--             <li><a href="/about" class="hover:text-blue-300">About Us</a></li> -->
+  <!--             <li><a href="/products" class="hover:text-blue-300">Our Products</a></li> -->
+  <!--             <li><a href="/contact" class="hover:text-blue-300">Become a Distributor</a></li> -->
+  <!--           </ul> -->
+  <!--         </div> -->
+  <!--         <div> -->
+  <!--           <h3 class="text-xl font-bold mb-4">Contact</h3> -->
+  <!--           <ul class="space-y-2"> -->
+  <!--             <li>Phone: (555) 123-4567</li> -->
+  <!--             <li>Email: info@brahmgange.com</li> -->
+  <!--             <li>Address: 123 Water Street, Crystal City, ST 12345</li> -->
+  <!--           </ul> -->
+  <!--         </div> -->
+  <!--       </div> -->
+  <!--       <div class="text-center mt-8 pt-8 border-t border-gray-700"> -->
+  <!--         <p>&copy; {new Date().getFullYear()} Brahmgange Waters. All rights reserved.</p> -->
+  <!--       </div> -->
+  <!--     </div> -->
+  <!--   </footer> -->
+  <!--   <WhatsAppButton phoneNumber="1234567890" /> -->
+  <!-- </body> -->
+</html>
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #fff;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>
