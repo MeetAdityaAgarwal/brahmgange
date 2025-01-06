@@ -13,21 +13,26 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
     <meta charset="UTF-8" />
     <meta name="description" content="Premium packaged drinking water for distributors" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Brahmgange Beverages</title>
+    <meta property="og:title" content="{title} | Brahmgange Beverages" />
+    <meta property="og:description" content="Premium packaged drinking water for distributors." />
+    <meta property="og:image" content="/logo_init_nobg.png" /> 
+    <meta property="og:url" content="{window.location.href}" /> 
+    <meta property="og:type" content="website" />
   </head>
   <body>
-  <header class="bg-blue-600 text-white">
+  <header class="bg-blue-500 bg-gradient-to-b from-sky-700 via-blue-800 via-blue-800 to-sky-700 text-white">
     <nav class="container mx-auto px-4 py-6">
   <div class="flex justify-between items-center">
     <a href="/" class="flex items-center space-x-3">
       <img 
-        src="logo_init_nobg.png" 
+              src="/logo_init_nobg.png" 
         alt="Brahmgange Logo" 
         class="h-24 md:h-32 w-auto"
       >
-      <span class="text-3xl md:text-4xl font-bold">Brahmgange Beverages</span>
+      <span class="text-3xl font-semibold md:text-4xl font-bold">Brahmgange Beverages</span>
     </a>
     
     <!-- Mobile Hamburger Menu Button -->
@@ -46,20 +51,20 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
       <li><a href="/" class="hover:text-blue-200">Home</a></li>
       <li><a href="/about" class="hover:text-blue-200">About</a></li>
       <li><a href="/products" class="hover:text-blue-200">Products</a></li>
-      <li><a href="/blog" class="hover:text-blue-200">Blog</a></li>
+      <li><a href="/blogs" class="hover:text-blue-200">Blog</a></li>
       <li><a href="/contact" class="hover:text-blue-200">Contact</a></li>
     </ul>
     
     <!-- Mobile Menu (Initially Hidden) -->
     <ul 
-      class="md:hidden absolute top-36 left-0 w-full bg-blue-600 text-white text-center space-y-4 py-4"
+      class="md:hidden absolute top-36 left-0 w-full bg-blue-500 text-white text-2xl text-center space-y-4 py-4 bg-opacity-95"
       id="mobile-nav"
       style="display: none;"
     >
       <li><a href="/" class="hover:text-blue-200">Home</a></li>
       <li><a href="/about" class="hover:text-blue-200">About</a></li>
       <li><a href="/products" class="hover:text-blue-200">Products</a></li>
-      <li><a href="/blog" class="hover:text-blue-200">Blog</a></li>
+      <li><a href="/blogs" class="hover:text-blue-200">Blog</a></li>
       <li><a href="/contact" class="hover:text-blue-200">Contact</a></li>
     </ul>
   </div>
@@ -90,7 +95,7 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
         <div>
           <h3 class="text-xl font-bold mb-4">Contact</h3>
           <ul class="space-y-2">
-            <li>Phone: 79009 89663</li>
+            <li>Phone: <a href="tel:+917900989663" class="hover:underline">+91 7900989663</a></li>
             <li>Email: info@brahmgange.com</li>
             <li>Address: Khasra no 269 JA Kuanwala, Dehradun, Uttarakhand 248008</li>
           </ul>
@@ -110,6 +115,19 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
   </footer>
 
   <WhatsAppButton phoneNumber="7900989663" />
+    <script>
+      const hamburgerButton = document.getElementById('hamburger-button');
+      const mobileNav = document.getElementById('mobile-nav');
+
+      hamburgerButton.addEventListener('click', () => {
+        // Toggle display of mobile navigation
+        if (mobileNav.style.display === 'none' || mobileNav.style.display === '') {
+          mobileNav.style.display = 'block';
+        } else {
+          mobileNav.style.display = 'none';
+        }
+      });
+    </script>
 </body>
 
   <!-- <body> -->

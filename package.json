@@ -11,18 +11,27 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^3.1.0",
+    "@astrojs/react": "^4.1.2",
     "@astrojs/tailwind": "^5.1.0",
-    "@sanity/client": "^6.15.7",
+    "@astrojs/vercel": "^8.0.1",
+    "@portabletext/react": "^3.2.0",
+    "@sanity/astro": "^3.1.9",
+    "@sanity/client": "^6.24.1",
     "@sanity/image-url": "^1.0.2",
-    "astro": "^4.15.3",
+    "@sanity/vision": "^3.68.3",
+    "@sanity/visual-editing": "^2.11.4",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "astro": "^5.1.2",
     "groq": "^3.35.2",
     "nodemailer": "^6.9.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanity": "^3.68.3",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
+    "dotenv": "^16.4.7",
     "typescript": "^5.7.2"
   }
 }

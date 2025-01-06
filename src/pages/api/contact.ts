@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro';
 import nodemailer from 'nodemailer';
 
-const ADMIN_EMAIL = 'admin@brahmgange.com'; // Replace with actual admin email
+const ADMIN_EMAIL = process.env.QUERY_EMAIL_ID;
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com', // Replace with your SMTP server
+  host: process.env.EMAIL_HOSTNAME,
   port: 587,
   secure: false,
   auth: {
@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
 export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.json();
-    
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: ADMIN_EMAIL,
@@ -32,6 +32,8 @@ export const POST: APIRoute = async ({ request }) => {
         <p>${data.message}</p>
       `,
     };
+
+    console.log("about to send mail");
 
     await transporter.sendMail(mailOptions);
 

@@ -21,12 +21,21 @@ export default function ContactForm() {
         },
         body: JSON.stringify(data),
       });
+      console.log("STATUS CODE: ", response.status);
+      const responseBody = await response.json();
+      console.log("Response BODY: ", responseBody);
 
-      if (!response.ok) throw new Error('Failed to send message');
+
+
+      if (!response.ok) {
+        // Here, you can throw an error with a specific message if needed
+        throw new Error(responseBody.message || 'Failed to send message');
+      }
 
       setFormStatus('success');
-      e.currentTarget.reset();
+      // e.currentTarget.reset();
     } catch (error) {
+      console.error('Error:', error);
       setFormStatus('error');
     } finally {
       setIsLoading(false);
