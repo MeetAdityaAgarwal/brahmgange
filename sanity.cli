@@ -3,6 +3,6 @@ module.exports = {
   api: {
     projectId: process.env.SANITYIO_ID,
     dataset: process.env.SANITYIO_DATASET,
-    token: 'sk0OfxxiUykClrMTInylufz4DtmzX1wTJyXcJDkG39REzkBECpmX1XYB5E9veJGAcpSdB7rspSaZPMd0SNfKDr78uDOEpJHdxpzxHBzqcJCIIatIAHv9nvPfA96OipXrRMd3VA9yNe0K8BwiHqAJV2Ck5PtMdKsXjriy68bKQ984dzvvlMju'
+    token: process.env.MAIL_TOKEN 
   },
 };
