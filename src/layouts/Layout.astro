@@ -13,7 +13,20 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
     <meta charset="UTF-8" />
     <meta name="description" content="Premium packaged drinking water for distributors" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+<!-- Standard Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    
+    <!-- PNG Favicons -->
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+
+    <!-- Other sizes for specific devices -->
+    <link rel="icon" href="/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="/android-chrome-512x512.png" sizes="512x512" type="image/png">
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Brahmgange Beverages</title>
     <meta property="og:title" content="{title} | Brahmgange Beverages" />
@@ -96,7 +109,7 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
           <h3 class="text-xl font-bold mb-4">Contact</h3>
           <ul class="space-y-2">
             <li>Phone: <a href="tel:+917900989663" class="hover:underline">+91 7900989663</a></li>
-            <li>Email: info@brahmgange.com</li>
+            <li>Email: support@brahmgange.com</li>
             <li>Address: Khasra no 269 JA Kuanwala, Dehradun, Uttarakhand 248008</li>
           </ul>
         </div>
@@ -111,6 +124,7 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
       <div class="text-center mt-8 pt-8 border-t border-gray-700">
         <p>&copy; <script>document.write(new Date().getFullYear())</script> Brahmgange Beverages Private Limited. All rights reserved.</p>
       </div>
+      <!-- <a class="text-gray-600" href="https://www.vecteezy.com/free-png/water-bottle-icon">Water Bottle Icon PNGs by Vecteezy</a> -->
     </div>
   </footer>
 
@@ -130,55 +144,6 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
     </script>
 </body>
 
-  <!-- <body> -->
-  <!--   <header class="bg-blue-600 text-white"> -->
-  <!--     <nav class="container mx-auto px-4 py-6"> -->
-  <!--       <div class="flex justify-between items-center"> -->
-  <!--         <a href="/" class="text-2xl font-bold">Brahmgange</a> -->
-  <!--         <ul class="flex space-x-6"> -->
-  <!--           <li><a href="/" class="hover:text-blue-200">Home</a></li> -->
-  <!--           <li><a href="/about" class="hover:text-blue-200">About</a></li> -->
-  <!--           <li><a href="/products" class="hover:text-blue-200">Products</a></li> -->
-  <!--           <li><a href="/blog" class="hover:text-blue-200">Blog</a></li> -->
-  <!--           <li><a href="/contact" class="hover:text-blue-200">Contact</a></li> -->
-  <!--         </ul> -->
-  <!--       </div> -->
-  <!--     </nav> -->
-  <!--   </header> -->
-  <!--   <main> -->
-  <!--     <slot /> -->
-  <!--   </main> -->
-  <!--   <footer class="bg-gray-800 text-white py-8 mt-12"> -->
-  <!--     <div class="container mx-auto px-4"> -->
-  <!--       <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> -->
-  <!--         <div> -->
-  <!--           <h3 class="text-xl font-bold mb-4">Brahmgange Waters</h3> -->
-  <!--           <p>Providing premium quality packaged drinking water to distributors nationwide.</p> -->
-  <!--         </div> -->
-  <!--         <div> -->
-  <!--           <h3 class="text-xl font-bold mb-4">Quick Links</h3> -->
-  <!--           <ul class="space-y-2"> -->
-  <!--             <li><a href="/about" class="hover:text-blue-300">About Us</a></li> -->
-  <!--             <li><a href="/products" class="hover:text-blue-300">Our Products</a></li> -->
-  <!--             <li><a href="/contact" class="hover:text-blue-300">Become a Distributor</a></li> -->
-  <!--           </ul> -->
-  <!--         </div> -->
-  <!--         <div> -->
-  <!--           <h3 class="text-xl font-bold mb-4">Contact</h3> -->
-  <!--           <ul class="space-y-2"> -->
-  <!--             <li>Phone: (555) 123-4567</li> -->
-  <!--             <li>Email: info@brahmgange.com</li> -->
-  <!--             <li>Address: 123 Water Street, Crystal City, ST 12345</li> -->
-  <!--           </ul> -->
-  <!--         </div> -->
-  <!--       </div> -->
-  <!--       <div class="text-center mt-8 pt-8 border-t border-gray-700"> -->
-  <!--         <p>&copy; {new Date().getFullYear()} Brahmgange Waters. All rights reserved.</p> -->
-  <!--       </div> -->
-  <!--     </div> -->
-  <!--   </footer> -->
-  <!--   <WhatsAppButton phoneNumber="1234567890" /> -->
-  <!-- </body> -->
 </html>
 <style is:global>
   :root {
