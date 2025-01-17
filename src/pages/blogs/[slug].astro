@@ -32,9 +32,9 @@ const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
 
   <article class="container mx-auto px-4 py-12 max-w-4xl">
     <img
-      src={urlFor(post.mainImage).width(1200).height(600).url()}
+      src={urlFor(post.mainImage).url()}
       alt={`Cover image for ${post.title}`}
-      class="w-full h-[400px] object-cover rounded-lg mb-8"
+      class="w-full h-[400px] object-contain rounded-lg mb-8"
     />
 
     <h1 class="text-4xl font-bold mb-4">{post.title}</h1>
