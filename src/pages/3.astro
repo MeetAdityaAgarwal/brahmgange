@@ -1,21 +1,27 @@
+
 ---
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home">
-	<div class="hero bg-blue-500 text-white py-60 bg-cover bg-center"
-    style="background-image: url('/hero_img_lander3.jpeg');">
-		<div class="container mx-auto text-center">
-      <h1 class="text-5xl font-bold  bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-        Premium Packaged Drinking Water
-      </h1>
-
-			<p class="text-xl mb-8">Partner with the leading water distributor in the region</p>
-			<a href="/contact" class="bg-white text-blue-500 px-8 py-3 rounded-full font-bold hover:bg-blue-100">Become a Distributor</a>
-		</div>
-	</div>
-
-	<section class="bg-gray-100 py-16">
+	<div 
+     class="hero bg-blue-500 text-white bg-cover rounded-b-3xl bg-center h-screen"
+     style="background-image: url('/hero_img_lander.jpeg');">
+     <div class="container mx-auto flex flex-col items-end h-full p-2">
+       <div class="absolute text-center">
+         <h1 class="text-2xl font-bold bg-gradient-to-r from-white via-purple-400 to-orange-200 bg-clip-text text-transparent">
+           Premium Packaged
+         </h1>
+         <h1 class="text-2xl mb-5 font-bold bg-gradient-to-r from-white via-purple-400 to-orange-200 bg-clip-text text-transparent">
+           Drinking Water
+         </h1>
+       </div>
+     </div>
+    <div class="flex flex-col items-center">
+			   <a href="/contact" class="bg-white absolute bottom-10 text-blue-500 opacity-95 px-3 py-2 rounded-full font-bold hover:bg-blue-100">Get Dealership</a>
+    </div>
+  </div>	
+  <section class="bg-gray-100 py-16">
 		<div class="container mx-auto px-4">
 			<h2 class="text-3xl font-light text-gray-700  font-bold text-center mb-12">Why Choose Brahmgange Beverages?</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -41,6 +47,11 @@ import Layout from '../layouts/Layout.astro';
 					<p>Dedicated distributor support team to help grow your business</p>
 				</div>
 			</div>
+      <div class="mt-16 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Join Over</h2>
+            <h1 class="text-5xl font-extrabold text-blue-600 mb-2">300+</h1> <!-- Hardcoded number for distributors -->
+            <p class="text-lg text-gray-600">Distributors Partnered with Brahmgange Beverages</p>
+        </div>
 		</div>
 	</section>
 
@@ -49,11 +60,11 @@ import Layout from '../layouts/Layout.astro';
 			<h2 class="text-3xl font-bold font-light text-center mb-12">Our Distribution Network</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 				<div>
-          <img src="/family_lander.webp" alt="Water Bottling Plant" class="rounded-lg shadow-lg">
+          <img src="/landing_bottom.jpeg" alt="Water Bottling Plant" class="rounded-lg shadow-lg">
 				</div>
 				<div class="flex flex-col justify-center">
 					<h3 class="text-2xl font-semibold font-bold mb-4">Join Our Growing Network</h3>
-					<p class="mb-6">With over 500 distributors nationwide, we're expanding our reach to bring pure, refreshing water to more communities.</p>
+					<p class="mb-6">With over 300+ distributors nationwide, we're expanding our reach to bring pure, refreshing water to more communities.</p>
 					<ul class="space-y-4">
 						<li class="flex items-center">
 							<span class="text-blue-500 mr-2">✓</span>
@@ -73,3 +84,4 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 </Layout>
+

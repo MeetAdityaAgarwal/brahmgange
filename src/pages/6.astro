@@ -7,19 +7,17 @@ import Layout from '../layouts/Layout.astro';
 	<div 
      class="hero bg-blue-500 text-white bg-cover rounded-b-3xl bg-center h-screen"
      style="background-image: url('/hero_img_lander.jpeg');">
-     <div class="container mx-auto flex flex-col items-end h-full p-2">
-       <div class="absolute text-center">
-         <h1 class="text-2xl font-bold bg-white bg-clip-text text-transparent">
+     <div class="container mx-auto flex flex-col items-center h-full">
+       <div class="absolute bottom-1  text-center">
+         <h1 class="text-2xl font-bold bg-gradient-to-b from-white to-white-200 bg-clip-text text-transparent">
            Premium Packaged
          </h1>
-         <h1 class="text-2xl mb-5 font-bold bg-white bg-clip-text text-transparent">
+         <h1 class="text-2xl mb-5 font-bold bg-gradient-to-b from-white to-white-200  bg-clip-text text-transparent">
            Drinking Water
          </h1>
+			   <a href="/contact" class="bg-white text-blue-500 opacity-95 px-3 py-2 rounded-full font-bold hover:bg-blue-100">Get Dealership</a>
        </div>
      </div>
-    <div class="flex flex-col items-center">
-			   <a href="/contact" class="bg-white absolute bottom-10 text-blue-500 opacity-95 px-3 py-2 rounded-full font-bold hover:bg-blue-100">Get Dealership</a>
-    </div>
   </div>	
   <section class="bg-gray-100 py-16">
 		<div class="container mx-auto px-4">
@@ -84,5 +82,3 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 </Layout>
-
-
