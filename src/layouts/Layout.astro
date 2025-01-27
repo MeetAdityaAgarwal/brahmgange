@@ -36,7 +36,7 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
     <meta property="og:type" content="website" />
   </head>
   <body>
-  <header class="bg-blue-500 bg-gradient-to-b from-sky-700 via-blue-800 via-blue-800 to-sky-700 text-white">
+  <header class="bg-blue-500 bg-gradient-to-b overflow-hidden from-sky-700 via-blue-800 via-blue-800 to-sky-700 text-white">
     <nav class="container mx-auto px-4 py-6">
   <div class="flex justify-between items-center">
     <a href="/" class="flex items-center space-x-3">
@@ -87,7 +87,7 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
     <slot />
   </main>
 
-  <footer class="bg-gray-800 text-white py-8 mt-12">
+  <footer class="overflow-hidden bg-gray-800 text-white py-8 mt-12">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Footer Section 1 -->
